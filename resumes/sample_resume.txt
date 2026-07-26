@@ -1,0 +1,17 @@
+Rahul Sharma
+
+Email: rahul.sharma@gmail.com
+Phone: +91 9876543210
+
+Skills:
+Python
+SQL
+Git
+Flask
+REST API
+
+Experience:
+3 Years
+
+Education:
+B.Tech Computer Science

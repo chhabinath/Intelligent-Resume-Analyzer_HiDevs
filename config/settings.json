@@ -1,0 +1,8 @@
+{
+    "skill_points": 15,
+    "experience_points": 25,
+    "education_points": 15,
+    "max_score": 100,
+    "recommend_threshold": 60,
+    "strong_recommend_threshold": 80
+}

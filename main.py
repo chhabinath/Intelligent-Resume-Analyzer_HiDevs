@@ -1,15 +1,20 @@
 from file_manager import read_text_file
+from job_loader import load_job
 from parser import ResumeParser
 
 
 def main():
-    text = read_text_file("resumes/sample_resume.txt")
+    resume_text = read_text_file(
+        "resumes/sample_resume.txt"
+    )
 
-    parser = ResumeParser(text)
+    candidate = ResumeParser(resume_text).parse()
 
-    candidate = parser.parse()
+    job = load_job("jobs/python_developer.json")
 
     print(candidate)
+    print()
+    print(job)
 
 
 if __name__ == "__main__":

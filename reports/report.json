@@ -1,0 +1,38 @@
+{
+    "candidate": {
+        "name": "Rahul Sharma",
+        "email": "rahul.sharma@gmail.com",
+        "phone": "+91 9876543210",
+        "skills": [
+            "Python",
+            "SQL",
+            "Flask",
+            "REST API"
+        ],
+        "experience": 3,
+        "education": "B.Tech Computer Science"
+    },
+    "job": {
+        "title": "Python Developer",
+        "required_skills": [
+            "Python",
+            "SQL",
+            "Git",
+            "Flask"
+        ],
+        "min_experience": 2,
+        "education": "B.Tech Computer Science"
+    },
+    "match_result": {
+        "score": 87,
+        "matched_skills": [
+            "Python",
+            "SQL",
+            "Flask"
+        ],
+        "missing_skills": [
+            "Git"
+        ],
+        "recommendation": "Strongly Recommend"
+    }
+}

@@ -1,5 +1,5 @@
+from logger import logger
 from models import Candidate, Job, MatchResult
-
 
 class CandidateMatcher:
     """
@@ -8,6 +8,13 @@ class CandidateMatcher:
     """
 
     def match(self, candidate: Candidate, job: Job) -> MatchResult:
+
+        """
+        Compare a candidate with a job description and
+        return the calculated match result.
+        """
+
+        logger.info("Matching candidate with job")
         matched_skills = []
         missing_skills = []
 
@@ -53,6 +60,16 @@ class CandidateMatcher:
 
         # Maximum score should not exceed 100
         score = min(score, 100)
+
+        logger.info(
+            f"Matched Skills: {len(matched_skills)}/{required_skill_count}"
+        )
+
+        logger.info(f"Final score: {score}")
+
+        recommendation = self.get_recommendation(score)
+
+        logger.info(f"Recommendation: {recommendation}")
 
         return MatchResult(
             score=score,

@@ -1,10 +1,15 @@
 from dataclasses import asdict
 
 from file_manager import write_json_file, write_text_file
+from logger import logger
 from models import Candidate, Job, MatchResult
 
 
 class ReportGenerator:
+    """
+    Generates and saves resume analysis reports
+    in text and JSON formats.
+    """
 
     def generate_report(
         self,
@@ -12,6 +17,10 @@ class ReportGenerator:
         job: Job,
         result: MatchResult,
     ) -> str:
+        """
+        Generate a formatted text report for the
+        candidate's resume analysis.
+        """
 
         matched = (
             ", ".join(result.matched_skills)
@@ -26,40 +35,49 @@ class ReportGenerator:
         )
 
         report = f"""
-============================================================
-                INTELLIGENT RESUME ANALYZER
-============================================================
+        ============================================================
+                        INTELLIGENT RESUME ANALYZER
+        ============================================================
 
-Candidate Information
----------------------
-Name           : {candidate.name}
-Email          : {candidate.email}
-Phone          : {candidate.phone}
-Experience     : {candidate.experience} Years
-Education      : {candidate.education}
+        Candidate Information
+        ---------------------
+        Name           : {candidate.name}
+        Email          : {candidate.email}
+        Phone          : {candidate.phone}
+        Experience     : {candidate.experience} Years
+        Education      : {candidate.education}
 
-Job Information
----------------
-Position       : {job.title}
+        Job Information
+        ---------------
+        Position       : {job.title}
 
-Skill Analysis
---------------
-Matched Skills : {matched}
-Missing Skills : {missing}
+        Skill Analysis
+        --------------
+        Matched Skills : {matched}
+        Missing Skills : {missing}
 
-Overall Match Score : {result.score}/100
+        Overall Match Score : {result.score}/100
 
-Recommendation
---------------
-{result.recommendation}
+        Recommendation
+        --------------
+        {result.recommendation}
 
-============================================================
-"""
+        ============================================================
+        """
+        logger.info("Report generated")
 
         return report.strip()
 
-    def save_text_report(self, report: str, file_path: str):
+    def save_text_report(
+            self, 
+            report: str, 
+            file_path: str
+        ) -> None:
+        """
+        Save the generated report as a text file.
+        """
         write_text_file(file_path, report)
+        logger.info(f"Text report saved: {file_path}")
 
     def save_json_report(
         self,
@@ -67,7 +85,10 @@ Recommendation
         job: Job,
         result: MatchResult,
         file_path: str,
-    ):
+    ) -> None:
+        """
+        Save the analysis data as a JSON file.
+        """
 
         data = {
             "candidate": asdict(candidate),
@@ -76,3 +97,4 @@ Recommendation
         }
 
         write_json_file(file_path, data)
+        logger.info(f"JSON report saved: {file_path}")

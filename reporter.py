@@ -119,7 +119,7 @@ class ReportGenerator:
             reverse=True,
         ):
             lines.append(
-                f"{result['name']:<20} "
+                f"{result['candidate']:<20} "
                 f"{result['score']:<10} "
                 f"{result['recommendation']}"
             )

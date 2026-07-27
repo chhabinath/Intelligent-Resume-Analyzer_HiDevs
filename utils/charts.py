@@ -95,7 +95,7 @@ def create_candidate_ranking(results):
 
     for result in results:
 
-        names.append(result["candidate"])
+        names.append(result["candidate"])   
 
         scores.append(result["score"])
 

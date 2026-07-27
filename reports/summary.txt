@@ -4,5 +4,6 @@
 
 Candidate            Score      Recommendation
 ----------------------------------------------------------------------
+Amit Kumar           100        Strongly Recommend
 Rahul Sharma         87         Strongly Recommend
 ======================================================================

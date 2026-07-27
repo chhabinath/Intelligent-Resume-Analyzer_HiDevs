@@ -40,7 +40,7 @@ class ExcelExporter:
             reverse=True,
         ):
             worksheet.append([
-                result["name"],
+                result["candidate"],
                 result["score"],
                 result["recommendation"],
                 ", ".join(result["matched_skills"]),

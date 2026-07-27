@@ -1,0 +1,28 @@
+============================================================
+                        INTELLIGENT RESUME ANALYZER
+        ============================================================
+
+        Candidate Information
+        ---------------------
+        Name           : Amit Kumar
+        Email          : amit.kumar@gmail.com
+        Phone          : +91 9988776655
+        Experience     : 3 Years
+        Education      : B.Tech Computer Science
+
+        Job Information
+        ---------------
+        Position       : Python Developer
+
+        Skill Analysis
+        --------------
+        Matched Skills : Python, SQL, Git, Flask
+        Missing Skills : None
+
+        Overall Match Score : 100/100
+
+        Recommendation
+        --------------
+        Strongly Recommend
+
+        ============================================================

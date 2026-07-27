@@ -4,19 +4,14 @@ Email: amit.kumar@gmail.com
 Phone: +91 9988776655
 
 Skills:
-
-JavaScript
-
-React.js
-
-Node.js
-
-MongoDB
+Python
+SQL
+Flask
+REST API
+GIT
 
 Experience:
-
-2 Years
+3 Years
 
 Education:
-
-B.C.A. Computer Applications
+B.Tech Computer Science

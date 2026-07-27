@@ -8,6 +8,9 @@ from parser import ResumeParser
 from reporter import ReportGenerator
 from validator import CandidateValidator
 
+from excel_exporter import ExcelExporter
+
+
 
 class BatchProcessor:
     """
@@ -20,6 +23,7 @@ class BatchProcessor:
         job = load_job(job_file)
         matcher = CandidateMatcher()
         reporter = ReportGenerator()
+        excel_exporter = ExcelExporter()
 
         for resume_file in Path(resumes_dir).glob("*.txt"):
             logger.info(f"Processing {resume_file.name}")
@@ -73,6 +77,13 @@ class BatchProcessor:
                 summary,
                 "reports/summary.txt",
             )
+
+            excel_exporter.export_summary(
+                results,
+                "reports/summary.xlsx",
+            )
+
+            logger.info("Excel summary report generated")
 
             logger.info("Batch summary report generated")
         else:

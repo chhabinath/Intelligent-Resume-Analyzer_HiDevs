@@ -1,0 +1,22 @@
+Vikram Singh
+Email: vikram.singh@gmail.com
+
+Phone: +91 9700112233
+
+Skills:
+
+AWS
+
+Docker
+
+Kubernetes
+
+Terraform
+
+Experience:
+
+3 Years
+
+Education:
+
+B.E. Electronics and Communication

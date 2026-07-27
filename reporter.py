@@ -98,3 +98,32 @@ class ReportGenerator:
 
         write_json_file(file_path, data)
         logger.info(f"JSON report saved: {file_path}")
+
+    def generate_summary(self, results: list[dict]) -> str:
+        """
+        Generate a summary report for all processed candidates.
+        """
+
+        lines = [
+            "=" * 70,
+            "               BATCH RESUME ANALYSIS SUMMARY",
+            "=" * 70,
+            "",
+            f"{'Candidate':<20} {'Score':<10} {'Recommendation'}",
+            "-" * 70,
+        ]
+
+        for result in sorted(
+            results,
+            key=lambda x: x["score"],
+            reverse=True,
+        ):
+            lines.append(
+                f"{result['name']:<20} "
+                f"{result['score']:<10} "
+                f"{result['recommendation']}"
+            )
+
+        lines.append("=" * 70)
+
+        return "\n".join(lines)

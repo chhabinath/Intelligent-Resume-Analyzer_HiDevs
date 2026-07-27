@@ -1,0 +1,22 @@
+Priya Patel
+Email: priya.patel@gmail.com
+
+Phone: +91 9123456789
+
+Skills:
+
+Java
+
+Spring Boot
+
+MySQL
+
+Hibernate
+
+Experience:
+
+4 Years
+
+Education:
+
+B.Tech Information Technology

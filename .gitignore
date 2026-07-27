@@ -8,3 +8,7 @@ node_modules/
 .idea/
 .vscode/
 *.log
+*.pyc
+.streamlit/
+reports/*.pdf
+reports/*.xlsx

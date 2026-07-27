@@ -202,6 +202,57 @@ class CandidateRepository:
 
         return dict(row)
 
+    def filter_candidates(
+        self,
+        keyword="",
+        recommendation="All",
+        min_score=0,
+        min_experience=0,
+        sort_by="score",
+    ):
+
+        query = """
+            SELECT *
+            FROM candidates
+            WHERE
+                (
+                    name LIKE ?
+                    OR email LIKE ?
+                    OR matched_skills LIKE ?
+                    OR missing_skills LIKE ?
+                )
+                AND score >= ?
+                AND experience >= ?
+        """
+
+        parameters = [
+            f"%{keyword}%",
+            f"%{keyword}%",
+            f"%{keyword}%",
+            f"%{keyword}%",
+            min_score,
+            min_experience,
+        ]
+
+        if recommendation != "All":
+            query += " AND recommendation = ?"
+            parameters.append(recommendation)
+
+        allowed_sort = {
+            "score": "score DESC",
+            "experience": "experience DESC",
+            "name": "name ASC",
+            "created_at": "created_at DESC",
+        }
+
+        query += f" ORDER BY {allowed_sort.get(sort_by, 'score DESC')}"
+
+        self.db.cursor.execute(query, parameters)
+
+        rows = self.db.cursor.fetchall()
+
+        return [dict(row) for row in rows]
+
     # --------------------------------------------------
     # Close Connection
     # --------------------------------------------------

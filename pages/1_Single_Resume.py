@@ -17,6 +17,14 @@ from utils.charts import (
     create_skill_bar,
 )
 
+from utils.logger_utils import (
+    log_page_visit,
+    log_success,
+    log_error,
+)
+
+log_page_visit("Single Resume")
+
 # -------------------------------------------------
 # Page Configuration
 # -------------------------------------------------
@@ -109,6 +117,8 @@ if st.button("Analyze Resume"):
         # ---------------------------------------------
 
         st.success("Resume analyzed successfully!")
+
+        log_success("Single resume analyzed successfully.")
 
         st.markdown("---")
 
@@ -260,11 +270,12 @@ if st.button("Analyze Resume"):
             file_name="resume_report.txt",
             mime="text/plain",
         )
+        log_success("Single resume analyzed successfully.")
 
     except ValidationError as error:
-
+        log_error(str(error))
         st.error(f"Validation Error: {error}")
 
     except Exception as error:
-
+        log_error(str(error))
         st.exception(error)

@@ -1,14 +1,9 @@
-# Python
 __pycache__/
-*.py[cod]
-venv/
-env/
-.DS_Store
-node_modules/
-.idea/
-.vscode/
-*.log
 *.pyc
-.streamlit/
+.venv/
+.env
 reports/*.pdf
 reports/*.xlsx
+reports/*.txt
+.vscode/
+.idea/

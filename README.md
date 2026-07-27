@@ -1,14 +1,36 @@
 # Intelligent Resume Analyzer
 
-This project is automatically generated.
+## Features
+
+- Resume Parsing
+- ATS Scoring
+- Skill Matching
+- Batch Processing
+- PDF Reports
+- Excel Reports
+- Analytics Dashboard
 
 ## Installation
 
-```sh
 pip install -r requirements.txt
-```
-## Run Web Application
 
-```bash
 streamlit run app.py
-```
+
+## Project Structure
+
+...
+
+## Technologies
+
+Python
+
+Streamlit
+
+RapidFuzz
+
+ReportLab
+
+OpenPyXL
+
+Matplotlib
+

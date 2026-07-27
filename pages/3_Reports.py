@@ -2,6 +2,10 @@ from pathlib import Path
 
 import streamlit as st
 
+from utils.logger_utils import log_page_visit
+
+log_page_visit("Reports")
+
 st.set_page_config(
     page_title="Reports",
     page_icon="📄",
@@ -51,9 +55,10 @@ if txt_reports:
     st.subheader("Preview")
 
     st.text_area(
-        "",
+        "Report Preview",
         value=text,
         height=400,
+        label_visibility="collapsed",
     )
 
     st.download_button(

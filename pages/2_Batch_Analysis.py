@@ -9,6 +9,14 @@ from utils.charts import (
     create_score_distribution,
 )
 
+from utils.logger_utils import (
+    log_page_visit,
+    log_success,
+    log_error,
+)
+
+log_page_visit("Batch Analysis")
+
 # -------------------------------------------------
 # Page Configuration
 # -------------------------------------------------
@@ -59,6 +67,9 @@ if st.button("Analyze All Resumes"):
         st.stop()
 
     st.success("Batch processing completed!")
+    log_success(
+    f"{len(results)} resumes processed."
+)
 
     st.markdown("---")
 

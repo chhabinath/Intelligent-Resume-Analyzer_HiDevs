@@ -1,5 +1,10 @@
 import streamlit as st
 
+from utils.logger_utils import log_page_visit
+
+log_page_visit("About")
+
+
 st.set_page_config(
     page_title="About",
     page_icon="ℹ️",

@@ -106,10 +106,7 @@ class CandidateRepository:
     # Search Candidates
     # --------------------------------------------------
 
-    def search_candidates(
-        self,
-        keyword: str,
-    ):
+    def search_candidates(self, keyword: str):
 
         self.db.cursor.execute(
             """
@@ -122,8 +119,8 @@ class CandidateRepository:
             """,
             (
                 f"%{keyword}%",
-                f"%{keyword}%",
-            ),
+                f"%{keyword}%"
+            )
         )
 
         rows = self.db.cursor.fetchall()
@@ -187,6 +184,23 @@ class CandidateRepository:
         )
 
         return self.db.cursor.fetchone()[0]
+
+    def get_statistics(self):
+
+        self.db.cursor.execute(
+            """
+            SELECT
+                COUNT(*) as total,
+                AVG(score) as average_score,
+                MAX(score) as highest_score,
+                MIN(score) as lowest_score
+            FROM candidates
+            """
+        )
+
+        row = self.db.cursor.fetchone()
+
+        return dict(row)
 
     # --------------------------------------------------
     # Close Connection

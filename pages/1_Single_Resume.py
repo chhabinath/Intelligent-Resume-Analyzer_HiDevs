@@ -10,7 +10,7 @@ from matcher import CandidateMatcher
 from reporter import ReportGenerator
 from exceptions import ValidationError
 
-import matplotlib.pyplot as plt
+from candidate_repository import CandidateRepository
 
 from utils.charts import (
     create_skill_pie,
@@ -56,13 +56,20 @@ uploaded_file = st.file_uploader(
 # Job Selection
 # -------------------------------------------------
 
+jobs_dir = Path("jobs")
+jobs_dir.mkdir(exist_ok=True)
+
 job_files = sorted(
     [
         file
-        for file in os.listdir("jobs")
+        for file in os.listdir(jobs_dir)
         if file.endswith(".json")
     ]
 )
+
+if not job_files:
+    st.warning("No job description files found in the 'jobs' folder.")
+    st.stop()
 
 selected_job = st.selectbox(
     "Select Job Description",
@@ -80,10 +87,13 @@ if st.button("Analyze Resume"):
     if uploaded_file is None:
 
         st.warning("Please upload a resume.")
-
         st.stop()
 
     try:
+
+        # ---------------------------------------------
+        # Parse Resume
+        # ---------------------------------------------
 
         resume_text = uploaded_file.read().decode("utf-8")
 
@@ -93,9 +103,17 @@ if st.button("Analyze Resume"):
 
         CandidateValidator.validate(candidate)
 
+        # ---------------------------------------------
+        # Load Job Description
+        # ---------------------------------------------
+
         job = load_job(
-            f"jobs/{selected_job}"
+            str(jobs_dir / selected_job)
         )
+
+        # ---------------------------------------------
+        # Match Resume
+        # ---------------------------------------------
 
         matcher = CandidateMatcher()
 
@@ -103,6 +121,10 @@ if st.button("Analyze Resume"):
             candidate,
             job,
         )
+
+        # ---------------------------------------------
+        # Generate Report
+        # ---------------------------------------------
 
         reporter = ReportGenerator()
 
@@ -113,12 +135,48 @@ if st.button("Analyze Resume"):
         )
 
         # ---------------------------------------------
+        # Save Report
+        # ---------------------------------------------
+
+        reports_dir = Path("reports")
+        reports_dir.mkdir(exist_ok=True)
+
+        safe_name = candidate.name.replace(" ", "_")
+
+        report_path = reports_dir / f"{safe_name}_report.txt"
+
+        reporter.save_text_report(
+            report,
+            str(report_path),
+        )
+
+        # ---------------------------------------------
+        # Save Candidate to Database
+        # ---------------------------------------------
+
+        repository = CandidateRepository()
+
+        try:
+
+            repository.add_candidate(
+                candidate,
+                result,
+                str(report_path),
+            )
+
+        finally:
+
+            repository.close()
+
+        # ---------------------------------------------
         # Success Message
         # ---------------------------------------------
 
         st.success("Resume analyzed successfully!")
 
-        log_success("Single resume analyzed successfully.")
+        log_success(
+            f"Resume analyzed successfully: {candidate.name}"
+        )
 
         st.markdown("---")
 
@@ -167,8 +225,8 @@ if st.button("Analyze Resume"):
         st.subheader("📊 Match Score")
 
         st.metric(
-            label="Overall Score",
-            value=f"{result.score:.2f}%",
+            "Overall Score",
+            f"{result.score:.2f}%",
         )
 
         st.progress(result.score / 100)
@@ -210,7 +268,6 @@ if st.button("Analyze Resume"):
             if result.matched_skills:
 
                 for skill in result.matched_skills:
-
                     st.success(skill)
 
             else:
@@ -224,7 +281,6 @@ if st.button("Analyze Resume"):
             if result.missing_skills:
 
                 for skill in result.missing_skills:
-
                     st.error(skill)
 
             else:
@@ -232,11 +288,17 @@ if st.button("Analyze Resume"):
                 st.success("No missing skills.")
 
         st.markdown("---")
+
+        # ---------------------------------------------
+        # Charts
+        # ---------------------------------------------
+
         st.subheader("📊 Skill Match Visualization")
 
         col1, col2 = st.columns(2)
 
         with col1:
+
             st.pyplot(
                 create_skill_pie(
                     result.matched_skills,
@@ -245,6 +307,7 @@ if st.button("Analyze Resume"):
             )
 
         with col2:
+
             st.pyplot(
                 create_skill_bar(
                     result.matched_skills,
@@ -252,30 +315,39 @@ if st.button("Analyze Resume"):
                 )
             )
 
+        st.markdown("---")
+
         # ---------------------------------------------
-        # Report
+        # Report Preview
         # ---------------------------------------------
 
         st.subheader("📄 Generated Report")
 
         st.text_area(
             "Preview",
-            report,
+            value=report,
             height=300,
         )
 
         st.download_button(
             label="⬇ Download TXT Report",
             data=report,
-            file_name="resume_report.txt",
+            file_name=report_path.name,
             mime="text/plain",
         )
-        log_success("Single resume analyzed successfully.")
 
     except ValidationError as error:
+
         log_error(str(error))
+
         st.error(f"Validation Error: {error}")
 
     except Exception as error:
+
         log_error(str(error))
-        st.exception(error)
+
+        st.error(
+            "An unexpected error occurred while analyzing the resume."
+        )
+
+        st.caption(str(error))

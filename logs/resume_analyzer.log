@@ -1362,3 +1362,7 @@
 2026-07-27 16:27:52,382 | INFO | ResumeAnalyzer | Successfully processed amit.txt
 2026-07-27 16:27:52,383 | INFO | ResumeAnalyzer | Text report saved: reports/summary.txt
 2026-07-27 16:27:52,396 | INFO | ResumeAnalyzer | Batch summary report generated
+2026-07-27 17:11:51,440 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 17:11:53,685 | INFO | ResumeAnalyzer | Visited page: Batch Analysis
+2026-07-27 17:11:58,980 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 17:12:03,352 | INFO | ResumeAnalyzer | Visited page: Candidate Database

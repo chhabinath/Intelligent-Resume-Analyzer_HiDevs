@@ -4,6 +4,11 @@ A Python-based Resume Analysis System that automates resume screening by parsing
 
 ---
 
+## 🚀 Demo video
+https://www.youtube.com/watch?v=rs6PSzALoM8 
+
+[![Project Demo](https://img.youtube.com/vi/rs6PSzALoM8/maxresdefault.jpg)](https://www.youtube.com/watch?v=rs6PSzALoM8)
+
 ## 🚀 Features
 
 ### Resume Parsing

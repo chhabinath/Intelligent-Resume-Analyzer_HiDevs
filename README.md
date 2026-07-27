@@ -120,7 +120,7 @@ Intelligent-Resume-Analyzer/
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/Intelligent-Resume-Analyzer.git
+git clone [https://github.com/your-username/Intelligent-Resume-Analyzer.git](https://github.com/chhabinath/Intelligent-Resume-Analyzer_HiDevs.git)
 
 cd Intelligent-Resume-Analyzer
 ```

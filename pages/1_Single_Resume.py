@@ -10,6 +10,13 @@ from matcher import CandidateMatcher
 from reporter import ReportGenerator
 from exceptions import ValidationError
 
+import matplotlib.pyplot as plt
+
+from utils.charts import (
+    create_skill_pie,
+    create_skill_bar,
+)
+
 # -------------------------------------------------
 # Page Configuration
 # -------------------------------------------------
@@ -215,6 +222,25 @@ if st.button("Analyze Resume"):
                 st.success("No missing skills.")
 
         st.markdown("---")
+        st.subheader("📊 Skill Match Visualization")
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.pyplot(
+                create_skill_pie(
+                    result.matched_skills,
+                    result.missing_skills,
+                )
+            )
+
+        with col2:
+            st.pyplot(
+                create_skill_bar(
+                    result.matched_skills,
+                    result.missing_skills,
+                )
+            )
 
         # ---------------------------------------------
         # Report

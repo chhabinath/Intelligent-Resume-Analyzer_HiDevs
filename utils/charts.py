@@ -7,10 +7,10 @@ Intelligent Resume Analyzer.
 
 import matplotlib.pyplot as plt
 
-
 # ---------------------------------------------------
 # Skill Match Pie Chart
 # ---------------------------------------------------
+
 
 def create_skill_pie(matched_skills, missing_skills):
     """
@@ -41,6 +41,7 @@ def create_skill_pie(matched_skills, missing_skills):
 # ---------------------------------------------------
 # Skill Coverage Bar Chart
 # ---------------------------------------------------
+
 
 def create_skill_bar(matched_skills, missing_skills):
     """
@@ -73,6 +74,7 @@ def create_skill_bar(matched_skills, missing_skills):
 # Candidate Ranking Chart
 # ---------------------------------------------------
 
+
 def create_candidate_ranking(results):
     """
     Parameters
@@ -95,7 +97,7 @@ def create_candidate_ranking(results):
 
     for result in results:
 
-        names.append(result["candidate"])   
+        names.append(result["candidate"])
 
         scores.append(result["score"])
 
@@ -121,15 +123,13 @@ def create_candidate_ranking(results):
 # Batch Score Distribution
 # ---------------------------------------------------
 
+
 def create_score_distribution(results):
     """
     Creates score distribution chart.
     """
 
-    scores = [
-        result["score"]
-        for result in results
-    ]
+    scores = [result["score"] for result in results]
 
     figure, ax = plt.subplots(figsize=(7, 4))
 

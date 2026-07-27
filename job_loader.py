@@ -18,9 +18,7 @@ def load_job(file_path: str) -> Job:
     for field in REQUIRED_FIELDS:
         if field not in data:
             logger.error(f"Missing required field: {field}")
-            raise ValidationError(
-                f"Missing required field: {field}"
-            )
+            raise ValidationError(f"Missing required field: {field}")
 
     logger.info("Job description validated successfully")
 

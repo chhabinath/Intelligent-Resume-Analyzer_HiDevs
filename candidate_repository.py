@@ -28,6 +28,8 @@ class CandidateRepository:
             Newly created candidate ID.
         """
 
+        print("Saving Candidate:", candidate.name)
+
         self.db.cursor.execute(
             """
             INSERT INTO candidates
@@ -59,6 +61,21 @@ class CandidateRepository:
         )
 
         self.db.connection.commit()
+        print("=" * 60)
+        print("Saving Candidate")
+        print("Name:", candidate.name)
+        print("Email:", candidate.email)
+        print("Phone:", candidate.phone)
+        print("Experience:", candidate.experience)
+        print("Score:", match_result.score)
+        print("Recommendation:", match_result.recommendation)
+        print("Matched Skills:", match_result.matched_skills)
+        print("Missing Skills:", match_result.missing_skills)
+        print("Report:", report_path)
+
+        print("Candidate saved successfully!")
+        print("Candidate ID:", self.db.cursor.lastrowid)
+        print("=" * 60)
 
         return self.db.cursor.lastrowid
 
@@ -68,13 +85,11 @@ class CandidateRepository:
 
     def get_all_candidates(self):
 
-        self.db.cursor.execute(
-            """
+        self.db.cursor.execute("""
             SELECT *
             FROM candidates
             ORDER BY score DESC
-            """
-        )
+            """)
 
         rows = self.db.cursor.fetchall()
 
@@ -117,10 +132,7 @@ class CandidateRepository:
                 OR email LIKE ?
             ORDER BY score DESC
             """,
-            (
-                f"%{keyword}%",
-                f"%{keyword}%"
-            )
+            (f"%{keyword}%", f"%{keyword}%"),
         )
 
         rows = self.db.cursor.fetchall()
@@ -176,27 +188,23 @@ class CandidateRepository:
 
     def count_candidates(self) -> int:
 
-        self.db.cursor.execute(
-            """
+        self.db.cursor.execute("""
             SELECT COUNT(*)
             FROM candidates
-            """
-        )
+            """)
 
         return self.db.cursor.fetchone()[0]
 
     def get_statistics(self):
 
-        self.db.cursor.execute(
-            """
+        self.db.cursor.execute("""
             SELECT
                 COUNT(*) as total,
                 AVG(score) as average_score,
                 MAX(score) as highest_score,
                 MIN(score) as lowest_score
             FROM candidates
-            """
-        )
+            """)
 
         row = self.db.cursor.fetchone()
 

@@ -1366,3 +1366,434 @@
 2026-07-27 17:11:53,685 | INFO | ResumeAnalyzer | Visited page: Batch Analysis
 2026-07-27 17:11:58,980 | INFO | ResumeAnalyzer | Visited page: Candidate Database
 2026-07-27 17:12:03,352 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 17:17:39,877 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 17:17:48,138 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 17:17:53,356 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 17:18:01,964 | INFO | ResumeAnalyzer | Visited page: Reports
+2026-07-27 17:18:04,141 | INFO | ResumeAnalyzer | Visited page: Batch Analysis
+2026-07-27 17:18:06,449 | INFO | ResumeAnalyzer | Visited page: Batch Analysis
+2026-07-27 17:18:06,458 | INFO | ResumeAnalyzer | Job description loaded
+2026-07-27 17:18:06,459 | INFO | ResumeAnalyzer | Job description validated successfully
+2026-07-27 17:18:06,460 | INFO | ResumeAnalyzer | Processing rahul.txt
+2026-07-27 17:18:06,463 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 17:18:06,463 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 17:18:06,464 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 17:18:06,468 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 17:18:06,468 | INFO | ResumeAnalyzer | 4 skills extracted
+2026-07-27 17:18:06,469 | INFO | ResumeAnalyzer | Experience extracted: 3 years
+2026-07-27 17:18:06,469 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 17:18:06,469 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 17:18:06,470 | INFO | ResumeAnalyzer | Candidate validation successful
+2026-07-27 17:18:06,470 | INFO | ResumeAnalyzer | Matching candidate with job
+2026-07-27 17:18:06,470 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Python'
+2026-07-27 17:18:06,480 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 17:18:06,481 | INFO | ResumeAnalyzer | Comparing 'Python' with 'SQL'
+2026-07-27 17:18:06,483 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 17:18:06,483 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'SQL'
+2026-07-27 17:18:06,483 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 17:18:06,483 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Git'
+2026-07-27 17:18:06,484 | INFO | ResumeAnalyzer | Skill matched (score=22.22222222222222)
+2026-07-27 17:18:06,484 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Git'
+2026-07-27 17:18:06,484 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 17:18:06,485 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Git'
+2026-07-27 17:18:06,485 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 17:18:06,485 | INFO | ResumeAnalyzer | Comparing 'REST API' with 'Git'
+2026-07-27 17:18:06,485 | INFO | ResumeAnalyzer | Skill matched (score=18.181818181818176)
+2026-07-27 17:18:06,485 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Flask'
+2026-07-27 17:18:06,486 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 17:18:06,486 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Flask'
+2026-07-27 17:18:06,486 | INFO | ResumeAnalyzer | Skill matched (score=25.0)
+2026-07-27 17:18:06,487 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Flask'
+2026-07-27 17:18:06,487 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 17:18:06,487 | INFO | ResumeAnalyzer | Matched Skills: 3/4
+2026-07-27 17:18:06,489 | INFO | ResumeAnalyzer | Final score: 87
+2026-07-27 17:18:06,489 | INFO | ResumeAnalyzer | Recommendation: Strongly Recommend
+2026-07-27 17:18:06,490 | INFO | ResumeAnalyzer | Report generated
+2026-07-27 17:18:06,491 | INFO | ResumeAnalyzer | Text report saved: reports/rahul_report.txt
+2026-07-27 17:18:06,504 | INFO | ResumeAnalyzer | PDF report saved: reports/rahul_report.pdf
+2026-07-27 17:18:06,505 | INFO | ResumeAnalyzer | Successfully processed rahul.txt
+2026-07-27 17:18:06,505 | INFO | ResumeAnalyzer | Processing vikram_singh.txt
+2026-07-27 17:18:06,507 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 17:18:06,507 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 17:18:06,508 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 17:18:06,508 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 17:18:06,508 | INFO | ResumeAnalyzer | 0 skills extracted
+2026-07-27 17:18:06,509 | INFO | ResumeAnalyzer | Experience extracted: 3 years
+2026-07-27 17:18:06,509 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 17:18:06,509 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 17:18:06,509 | ERROR | ResumeAnalyzer | Validation failed: skills is missing
+2026-07-27 17:18:06,510 | ERROR | ResumeAnalyzer | Failed to process vikram_singh.txt: Skills is required.
+2026-07-27 17:18:06,510 | INFO | ResumeAnalyzer | Processing priya_patel.txt
+2026-07-27 17:18:06,511 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 17:18:06,511 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 17:18:06,512 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 17:18:06,512 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 17:18:06,512 | INFO | ResumeAnalyzer | 0 skills extracted
+2026-07-27 17:18:06,513 | INFO | ResumeAnalyzer | Experience extracted: 4 years
+2026-07-27 17:18:06,513 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 17:18:06,513 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 17:18:06,514 | ERROR | ResumeAnalyzer | Validation failed: skills is missing
+2026-07-27 17:18:06,514 | ERROR | ResumeAnalyzer | Failed to process priya_patel.txt: Skills is required.
+2026-07-27 17:18:06,514 | INFO | ResumeAnalyzer | Processing sneha_reddy.txt
+2026-07-27 17:18:06,516 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 17:18:06,517 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 17:18:06,517 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 17:18:06,517 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 17:18:06,517 | INFO | ResumeAnalyzer | 0 skills extracted
+2026-07-27 17:18:06,517 | INFO | ResumeAnalyzer | Experience extracted: 5 years
+2026-07-27 17:18:06,519 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 17:18:06,520 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 17:18:06,520 | ERROR | ResumeAnalyzer | Validation failed: skills is missing
+2026-07-27 17:18:06,520 | ERROR | ResumeAnalyzer | Failed to process sneha_reddy.txt: Skills is required.
+2026-07-27 17:18:06,521 | INFO | ResumeAnalyzer | Processing amit.txt
+2026-07-27 17:18:06,521 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 17:18:06,522 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 17:18:06,522 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 17:18:06,522 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 17:18:06,522 | INFO | ResumeAnalyzer | 5 skills extracted
+2026-07-27 17:18:06,523 | INFO | ResumeAnalyzer | Experience extracted: 3 years
+2026-07-27 17:18:06,523 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 17:18:06,523 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 17:18:06,523 | INFO | ResumeAnalyzer | Candidate validation successful
+2026-07-27 17:18:06,523 | INFO | ResumeAnalyzer | Matching candidate with job
+2026-07-27 17:18:06,524 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Python'
+2026-07-27 17:18:06,524 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 17:18:06,525 | INFO | ResumeAnalyzer | Comparing 'Python' with 'SQL'
+2026-07-27 17:18:06,525 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 17:18:06,526 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'SQL'
+2026-07-27 17:18:06,527 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 17:18:06,528 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Git'
+2026-07-27 17:18:06,528 | INFO | ResumeAnalyzer | Skill matched (score=22.22222222222222)
+2026-07-27 17:18:06,529 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Git'
+2026-07-27 17:18:06,529 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 17:18:06,529 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Git'
+2026-07-27 17:18:06,530 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 17:18:06,530 | INFO | ResumeAnalyzer | Comparing 'REST API' with 'Git'
+2026-07-27 17:18:06,531 | INFO | ResumeAnalyzer | Skill matched (score=18.181818181818176)
+2026-07-27 17:18:06,531 | INFO | ResumeAnalyzer | Comparing 'GIT' with 'Git'
+2026-07-27 17:18:06,532 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 17:18:06,532 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Flask'
+2026-07-27 17:18:06,533 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 17:18:06,533 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Flask'
+2026-07-27 17:18:06,533 | INFO | ResumeAnalyzer | Skill matched (score=25.0)
+2026-07-27 17:18:06,533 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Flask'
+2026-07-27 17:18:06,534 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 17:18:06,534 | INFO | ResumeAnalyzer | Matched Skills: 4/4
+2026-07-27 17:18:06,535 | INFO | ResumeAnalyzer | Final score: 100
+2026-07-27 17:18:06,535 | INFO | ResumeAnalyzer | Recommendation: Strongly Recommend
+2026-07-27 17:18:06,535 | INFO | ResumeAnalyzer | Report generated
+2026-07-27 17:18:06,537 | INFO | ResumeAnalyzer | Text report saved: reports/amit_report.txt
+2026-07-27 17:18:06,546 | INFO | ResumeAnalyzer | PDF report saved: reports/amit_report.pdf
+2026-07-27 17:18:06,546 | INFO | ResumeAnalyzer | Successfully processed amit.txt
+2026-07-27 17:18:06,548 | INFO | ResumeAnalyzer | Text report saved: reports/summary.txt
+2026-07-27 17:18:06,564 | INFO | ResumeAnalyzer | Batch summary report generated
+2026-07-27 17:18:06,566 | INFO | ResumeAnalyzer | 2 resumes processed.
+2026-07-27 17:18:09,751 | INFO | ResumeAnalyzer | Visited page: Reports
+2026-07-27 17:18:14,911 | INFO | ResumeAnalyzer | Visited page: About
+2026-07-27 17:18:22,577 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 17:20:59,031 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 17:21:53,281 | INFO | ResumeAnalyzer | Visited page: Home
+2026-07-27 17:23:23,268 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 17:35:51,241 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:36:08,909 | INFO | ResumeAnalyzer | Visited page: Home
+2026-07-27 20:36:16,930 | INFO | ResumeAnalyzer | Visited page: Single Resume
+2026-07-27 20:36:26,640 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:36:27,660 | INFO | ResumeAnalyzer | Visited page: Batch Analysis
+2026-07-27 20:39:36,540 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:39:42,852 | INFO | ResumeAnalyzer | Visited page: Single Resume
+2026-07-27 20:39:45,535 | INFO | ResumeAnalyzer | Visited page: Home
+2026-07-27 20:39:47,988 | INFO | ResumeAnalyzer | Visited page: Single Resume
+2026-07-27 20:39:50,186 | INFO | ResumeAnalyzer | Visited page: Batch Analysis
+2026-07-27 20:39:53,211 | INFO | ResumeAnalyzer | Visited page: Batch Analysis
+2026-07-27 20:39:53,216 | INFO | ResumeAnalyzer | Job description loaded
+2026-07-27 20:39:53,217 | INFO | ResumeAnalyzer | Job description validated successfully
+2026-07-27 20:39:53,217 | INFO | ResumeAnalyzer | Processing rahul.txt
+2026-07-27 20:39:53,219 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 20:39:53,220 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 20:39:53,222 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 20:39:53,223 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 20:39:53,224 | INFO | ResumeAnalyzer | 4 skills extracted
+2026-07-27 20:39:53,224 | INFO | ResumeAnalyzer | Experience extracted: 3 years
+2026-07-27 20:39:53,225 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 20:39:53,225 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 20:39:53,225 | INFO | ResumeAnalyzer | Candidate validation successful
+2026-07-27 20:39:53,225 | INFO | ResumeAnalyzer | Matching candidate with job
+2026-07-27 20:39:53,226 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Python'
+2026-07-27 20:39:53,260 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:39:53,261 | INFO | ResumeAnalyzer | Comparing 'Python' with 'SQL'
+2026-07-27 20:39:53,262 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:39:53,262 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'SQL'
+2026-07-27 20:39:53,262 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:39:53,263 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Git'
+2026-07-27 20:39:53,263 | INFO | ResumeAnalyzer | Skill matched (score=22.22222222222222)
+2026-07-27 20:39:53,264 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Git'
+2026-07-27 20:39:53,264 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:39:53,264 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Git'
+2026-07-27 20:39:53,264 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:39:53,265 | INFO | ResumeAnalyzer | Comparing 'REST API' with 'Git'
+2026-07-27 20:39:53,265 | INFO | ResumeAnalyzer | Skill matched (score=18.181818181818176)
+2026-07-27 20:39:53,265 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Flask'
+2026-07-27 20:39:53,265 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:39:53,266 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Flask'
+2026-07-27 20:39:53,266 | INFO | ResumeAnalyzer | Skill matched (score=25.0)
+2026-07-27 20:39:53,268 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Flask'
+2026-07-27 20:39:53,269 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:39:53,269 | INFO | ResumeAnalyzer | Matched Skills: 3/4
+2026-07-27 20:39:53,269 | INFO | ResumeAnalyzer | Final score: 87
+2026-07-27 20:39:53,269 | INFO | ResumeAnalyzer | Recommendation: Strongly Recommend
+2026-07-27 20:39:53,270 | INFO | ResumeAnalyzer | Report generated
+2026-07-27 20:39:53,271 | INFO | ResumeAnalyzer | Text report saved: reports/rahul_report.txt
+2026-07-27 20:39:53,282 | INFO | ResumeAnalyzer | PDF report saved: reports/rahul_report.pdf
+2026-07-27 20:39:53,283 | INFO | ResumeAnalyzer | Successfully processed rahul.txt
+2026-07-27 20:39:53,283 | INFO | ResumeAnalyzer | Processing vikram_singh.txt
+2026-07-27 20:39:53,284 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 20:39:53,285 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 20:39:53,285 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 20:39:53,285 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 20:39:53,286 | INFO | ResumeAnalyzer | 0 skills extracted
+2026-07-27 20:39:53,286 | INFO | ResumeAnalyzer | Experience extracted: 3 years
+2026-07-27 20:39:53,286 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 20:39:53,287 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 20:39:53,287 | ERROR | ResumeAnalyzer | Validation failed: skills is missing
+2026-07-27 20:39:53,287 | ERROR | ResumeAnalyzer | Failed to process vikram_singh.txt: Skills is required.
+2026-07-27 20:39:53,288 | INFO | ResumeAnalyzer | Processing priya_patel.txt
+2026-07-27 20:39:53,290 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 20:39:53,290 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 20:39:53,290 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 20:39:53,290 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 20:39:53,290 | INFO | ResumeAnalyzer | 0 skills extracted
+2026-07-27 20:39:53,292 | INFO | ResumeAnalyzer | Experience extracted: 4 years
+2026-07-27 20:39:53,292 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 20:39:53,292 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 20:39:53,292 | ERROR | ResumeAnalyzer | Validation failed: skills is missing
+2026-07-27 20:39:53,292 | ERROR | ResumeAnalyzer | Failed to process priya_patel.txt: Skills is required.
+2026-07-27 20:39:53,292 | INFO | ResumeAnalyzer | Processing sneha_reddy.txt
+2026-07-27 20:39:53,293 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 20:39:53,294 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 20:39:53,294 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 20:39:53,294 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 20:39:53,294 | INFO | ResumeAnalyzer | 0 skills extracted
+2026-07-27 20:39:53,295 | INFO | ResumeAnalyzer | Experience extracted: 5 years
+2026-07-27 20:39:53,295 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 20:39:53,295 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 20:39:53,296 | ERROR | ResumeAnalyzer | Validation failed: skills is missing
+2026-07-27 20:39:53,297 | ERROR | ResumeAnalyzer | Failed to process sneha_reddy.txt: Skills is required.
+2026-07-27 20:39:53,297 | INFO | ResumeAnalyzer | Processing amit.txt
+2026-07-27 20:39:53,298 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 20:39:53,298 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 20:39:53,298 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 20:39:53,299 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 20:39:53,300 | INFO | ResumeAnalyzer | 5 skills extracted
+2026-07-27 20:39:53,300 | INFO | ResumeAnalyzer | Experience extracted: 3 years
+2026-07-27 20:39:53,300 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 20:39:53,300 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 20:39:53,300 | INFO | ResumeAnalyzer | Candidate validation successful
+2026-07-27 20:39:53,300 | INFO | ResumeAnalyzer | Matching candidate with job
+2026-07-27 20:39:53,300 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Python'
+2026-07-27 20:39:53,300 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:39:53,300 | INFO | ResumeAnalyzer | Comparing 'Python' with 'SQL'
+2026-07-27 20:39:53,300 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:39:53,301 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'SQL'
+2026-07-27 20:39:53,301 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:39:53,301 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Git'
+2026-07-27 20:39:53,301 | INFO | ResumeAnalyzer | Skill matched (score=22.22222222222222)
+2026-07-27 20:39:53,301 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Git'
+2026-07-27 20:39:53,301 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:39:53,301 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Git'
+2026-07-27 20:39:53,303 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:39:53,303 | INFO | ResumeAnalyzer | Comparing 'REST API' with 'Git'
+2026-07-27 20:39:53,303 | INFO | ResumeAnalyzer | Skill matched (score=18.181818181818176)
+2026-07-27 20:39:53,303 | INFO | ResumeAnalyzer | Comparing 'GIT' with 'Git'
+2026-07-27 20:39:53,304 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:39:53,304 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Flask'
+2026-07-27 20:39:53,305 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:39:53,305 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Flask'
+2026-07-27 20:39:53,305 | INFO | ResumeAnalyzer | Skill matched (score=25.0)
+2026-07-27 20:39:53,305 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Flask'
+2026-07-27 20:39:53,305 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:39:53,306 | INFO | ResumeAnalyzer | Matched Skills: 4/4
+2026-07-27 20:39:53,307 | INFO | ResumeAnalyzer | Final score: 100
+2026-07-27 20:39:53,307 | INFO | ResumeAnalyzer | Recommendation: Strongly Recommend
+2026-07-27 20:39:53,307 | INFO | ResumeAnalyzer | Report generated
+2026-07-27 20:39:53,309 | INFO | ResumeAnalyzer | Text report saved: reports/amit_report.txt
+2026-07-27 20:39:53,317 | INFO | ResumeAnalyzer | PDF report saved: reports/amit_report.pdf
+2026-07-27 20:39:53,318 | INFO | ResumeAnalyzer | Successfully processed amit.txt
+2026-07-27 20:39:53,319 | INFO | ResumeAnalyzer | Text report saved: reports/summary.txt
+2026-07-27 20:39:53,332 | INFO | ResumeAnalyzer | Batch summary report generated
+2026-07-27 20:39:53,333 | INFO | ResumeAnalyzer | 2 resumes processed.
+2026-07-27 20:39:56,796 | INFO | ResumeAnalyzer | Visited page: Reports
+2026-07-27 20:40:01,381 | INFO | ResumeAnalyzer | Visited page: About
+2026-07-27 20:40:05,348 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:45:59,204 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:46:07,603 | INFO | ResumeAnalyzer | Visited page: Single Resume
+2026-07-27 20:46:14,333 | INFO | ResumeAnalyzer | Visited page: Single Resume
+2026-07-27 20:46:15,138 | INFO | ResumeAnalyzer | Visited page: Single Resume
+2026-07-27 20:46:15,142 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 20:46:15,142 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 20:46:15,143 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 20:46:15,143 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 20:46:15,144 | INFO | ResumeAnalyzer | 4 skills extracted
+2026-07-27 20:46:15,144 | INFO | ResumeAnalyzer | Experience extracted: 3 years
+2026-07-27 20:46:15,145 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 20:46:15,145 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 20:46:15,145 | INFO | ResumeAnalyzer | Candidate validation successful
+2026-07-27 20:46:15,145 | INFO | ResumeAnalyzer | Job description loaded
+2026-07-27 20:46:15,145 | INFO | ResumeAnalyzer | Job description validated successfully
+2026-07-27 20:46:15,145 | INFO | ResumeAnalyzer | Matching candidate with job
+2026-07-27 20:46:15,145 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Python'
+2026-07-27 20:46:15,146 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:46:15,146 | INFO | ResumeAnalyzer | Comparing 'Python' with 'SQL'
+2026-07-27 20:46:15,146 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:46:15,146 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'SQL'
+2026-07-27 20:46:15,147 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:46:15,147 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Git'
+2026-07-27 20:46:15,148 | INFO | ResumeAnalyzer | Skill matched (score=22.22222222222222)
+2026-07-27 20:46:15,148 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Git'
+2026-07-27 20:46:15,149 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:46:15,149 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Git'
+2026-07-27 20:46:15,150 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:46:15,150 | INFO | ResumeAnalyzer | Comparing 'REST API' with 'Git'
+2026-07-27 20:46:15,150 | INFO | ResumeAnalyzer | Skill matched (score=18.181818181818176)
+2026-07-27 20:46:15,151 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Flask'
+2026-07-27 20:46:15,151 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:46:15,151 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Flask'
+2026-07-27 20:46:15,151 | INFO | ResumeAnalyzer | Skill matched (score=25.0)
+2026-07-27 20:46:15,151 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Flask'
+2026-07-27 20:46:15,151 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:46:15,152 | INFO | ResumeAnalyzer | Matched Skills: 3/4
+2026-07-27 20:46:15,152 | INFO | ResumeAnalyzer | Final score: 87
+2026-07-27 20:46:15,154 | INFO | ResumeAnalyzer | Recommendation: Strongly Recommend
+2026-07-27 20:46:15,155 | INFO | ResumeAnalyzer | Report generated
+2026-07-27 20:46:15,160 | INFO | ResumeAnalyzer | Text report saved: reports/Rahul_Sharma_report.txt
+2026-07-27 20:46:15,176 | INFO | ResumeAnalyzer | Resume analyzed successfully: Rahul Sharma
+2026-07-27 20:46:28,682 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:46:34,268 | INFO | ResumeAnalyzer | Visited page: Batch Analysis
+2026-07-27 20:46:37,428 | INFO | ResumeAnalyzer | Visited page: Batch Analysis
+2026-07-27 20:46:37,431 | INFO | ResumeAnalyzer | Job description loaded
+2026-07-27 20:46:37,432 | INFO | ResumeAnalyzer | Job description validated successfully
+2026-07-27 20:46:37,432 | INFO | ResumeAnalyzer | Processing rahul.txt
+2026-07-27 20:46:37,432 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 20:46:37,432 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 20:46:37,432 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 20:46:37,433 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 20:46:37,434 | INFO | ResumeAnalyzer | 4 skills extracted
+2026-07-27 20:46:37,434 | INFO | ResumeAnalyzer | Experience extracted: 3 years
+2026-07-27 20:46:37,434 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 20:46:37,434 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 20:46:37,434 | INFO | ResumeAnalyzer | Candidate validation successful
+2026-07-27 20:46:37,435 | INFO | ResumeAnalyzer | Matching candidate with job
+2026-07-27 20:46:37,435 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Python'
+2026-07-27 20:46:37,435 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:46:37,435 | INFO | ResumeAnalyzer | Comparing 'Python' with 'SQL'
+2026-07-27 20:46:37,435 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:46:37,435 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'SQL'
+2026-07-27 20:46:37,435 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:46:37,435 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Git'
+2026-07-27 20:46:37,436 | INFO | ResumeAnalyzer | Skill matched (score=22.22222222222222)
+2026-07-27 20:46:37,436 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Git'
+2026-07-27 20:46:37,436 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:46:37,436 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Git'
+2026-07-27 20:46:37,436 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:46:37,436 | INFO | ResumeAnalyzer | Comparing 'REST API' with 'Git'
+2026-07-27 20:46:37,436 | INFO | ResumeAnalyzer | Skill matched (score=18.181818181818176)
+2026-07-27 20:46:37,437 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Flask'
+2026-07-27 20:46:37,437 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:46:37,438 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Flask'
+2026-07-27 20:46:37,438 | INFO | ResumeAnalyzer | Skill matched (score=25.0)
+2026-07-27 20:46:37,438 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Flask'
+2026-07-27 20:46:37,438 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:46:37,438 | INFO | ResumeAnalyzer | Matched Skills: 3/4
+2026-07-27 20:46:37,438 | INFO | ResumeAnalyzer | Final score: 87
+2026-07-27 20:46:37,439 | INFO | ResumeAnalyzer | Recommendation: Strongly Recommend
+2026-07-27 20:46:37,439 | INFO | ResumeAnalyzer | Report generated
+2026-07-27 20:46:37,440 | INFO | ResumeAnalyzer | Text report saved: reports/rahul_report.txt
+2026-07-27 20:46:37,449 | INFO | ResumeAnalyzer | PDF report saved: reports/rahul_report.pdf
+2026-07-27 20:46:37,450 | INFO | ResumeAnalyzer | Successfully processed rahul.txt
+2026-07-27 20:46:37,450 | INFO | ResumeAnalyzer | Processing vikram_singh.txt
+2026-07-27 20:46:37,450 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 20:46:37,451 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 20:46:37,451 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 20:46:37,452 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 20:46:37,452 | INFO | ResumeAnalyzer | 0 skills extracted
+2026-07-27 20:46:37,452 | INFO | ResumeAnalyzer | Experience extracted: 3 years
+2026-07-27 20:46:37,452 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 20:46:37,453 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 20:46:37,453 | ERROR | ResumeAnalyzer | Validation failed: skills is missing
+2026-07-27 20:46:37,453 | ERROR | ResumeAnalyzer | Failed to process vikram_singh.txt: Skills is required.
+2026-07-27 20:46:37,453 | INFO | ResumeAnalyzer | Processing priya_patel.txt
+2026-07-27 20:46:37,453 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 20:46:37,453 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 20:46:37,453 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 20:46:37,453 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 20:46:37,453 | INFO | ResumeAnalyzer | 0 skills extracted
+2026-07-27 20:46:37,453 | INFO | ResumeAnalyzer | Experience extracted: 4 years
+2026-07-27 20:46:37,453 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 20:46:37,454 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 20:46:37,454 | ERROR | ResumeAnalyzer | Validation failed: skills is missing
+2026-07-27 20:46:37,454 | ERROR | ResumeAnalyzer | Failed to process priya_patel.txt: Skills is required.
+2026-07-27 20:46:37,454 | INFO | ResumeAnalyzer | Processing sneha_reddy.txt
+2026-07-27 20:46:37,454 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 20:46:37,455 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 20:46:37,455 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 20:46:37,455 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 20:46:37,456 | INFO | ResumeAnalyzer | 0 skills extracted
+2026-07-27 20:46:37,457 | INFO | ResumeAnalyzer | Experience extracted: 5 years
+2026-07-27 20:46:37,457 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 20:46:37,458 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 20:46:37,458 | ERROR | ResumeAnalyzer | Validation failed: skills is missing
+2026-07-27 20:46:37,458 | ERROR | ResumeAnalyzer | Failed to process sneha_reddy.txt: Skills is required.
+2026-07-27 20:46:37,458 | INFO | ResumeAnalyzer | Processing amit.txt
+2026-07-27 20:46:37,459 | INFO | ResumeAnalyzer | Parsing resume
+2026-07-27 20:46:37,459 | INFO | ResumeAnalyzer | Candidate name extracted
+2026-07-27 20:46:37,459 | INFO | ResumeAnalyzer | Email extracted
+2026-07-27 20:46:37,459 | INFO | ResumeAnalyzer | Phone number extracted
+2026-07-27 20:46:37,459 | INFO | ResumeAnalyzer | 5 skills extracted
+2026-07-27 20:46:37,460 | INFO | ResumeAnalyzer | Experience extracted: 3 years
+2026-07-27 20:46:37,460 | INFO | ResumeAnalyzer | Education extracted
+2026-07-27 20:46:37,460 | INFO | ResumeAnalyzer | Resume parsing completed
+2026-07-27 20:46:37,460 | INFO | ResumeAnalyzer | Candidate validation successful
+2026-07-27 20:46:37,460 | INFO | ResumeAnalyzer | Matching candidate with job
+2026-07-27 20:46:37,460 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Python'
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Comparing 'Python' with 'SQL'
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'SQL'
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Git'
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Skill matched (score=22.22222222222222)
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Git'
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Git'
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Comparing 'REST API' with 'Git'
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Skill matched (score=18.181818181818176)
+2026-07-27 20:46:37,461 | INFO | ResumeAnalyzer | Comparing 'GIT' with 'Git'
+2026-07-27 20:46:37,462 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:46:37,462 | INFO | ResumeAnalyzer | Comparing 'Python' with 'Flask'
+2026-07-27 20:46:37,462 | INFO | ResumeAnalyzer | Skill matched (score=0.0)
+2026-07-27 20:46:37,462 | INFO | ResumeAnalyzer | Comparing 'SQL' with 'Flask'
+2026-07-27 20:46:37,462 | INFO | ResumeAnalyzer | Skill matched (score=25.0)
+2026-07-27 20:46:37,462 | INFO | ResumeAnalyzer | Comparing 'Flask' with 'Flask'
+2026-07-27 20:46:37,462 | INFO | ResumeAnalyzer | Skill matched (score=100.0)
+2026-07-27 20:46:37,462 | INFO | ResumeAnalyzer | Matched Skills: 4/4
+2026-07-27 20:46:37,464 | INFO | ResumeAnalyzer | Final score: 100
+2026-07-27 20:46:37,464 | INFO | ResumeAnalyzer | Recommendation: Strongly Recommend
+2026-07-27 20:46:37,464 | INFO | ResumeAnalyzer | Report generated
+2026-07-27 20:46:37,464 | INFO | ResumeAnalyzer | Text report saved: reports/amit_report.txt
+2026-07-27 20:46:37,473 | INFO | ResumeAnalyzer | PDF report saved: reports/amit_report.pdf
+2026-07-27 20:46:37,474 | INFO | ResumeAnalyzer | Successfully processed amit.txt
+2026-07-27 20:46:37,475 | INFO | ResumeAnalyzer | Text report saved: reports/summary.txt
+2026-07-27 20:46:37,489 | INFO | ResumeAnalyzer | Batch summary report generated
+2026-07-27 20:46:37,493 | INFO | ResumeAnalyzer | 2 resumes processed.
+2026-07-27 20:46:44,851 | INFO | ResumeAnalyzer | Visited page: Reports
+2026-07-27 20:46:46,326 | INFO | ResumeAnalyzer | Visited page: About
+2026-07-27 20:46:48,526 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:47:06,093 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:47:23,574 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:47:34,964 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:47:36,887 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:47:36,984 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:47:55,711 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:47:57,144 | INFO | ResumeAnalyzer | Visited page: Candidate Database
+2026-07-27 20:52:33,741 | INFO | ResumeAnalyzer | Visited page: Home
+2026-07-27 20:52:36,772 | INFO | ResumeAnalyzer | Visited page: Candidate Database

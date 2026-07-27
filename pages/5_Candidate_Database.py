@@ -155,9 +155,7 @@ try:
         # CSV Export
         # -------------------------------------------------
 
-        csv = display_df.to_csv(
-            index=False
-        ).encode("utf-8")
+        csv = display_df.to_csv(index=False).encode("utf-8")
 
         st.download_button(
             label="📥 Export Filtered Results",
@@ -174,57 +172,36 @@ try:
 
         st.subheader("👤 Candidate Details")
 
-        names = [
-            f'{c["id"]} - {c["name"]}'
-            for c in candidates
-        ]
+        names = [f'{c["id"]} - {c["name"]}' for c in candidates]
 
         selected = st.selectbox(
             "Select Candidate",
             names,
         )
 
-        candidate_id = int(
-            selected.split("-")[0].strip()
-        )
+        candidate_id = int(selected.split("-")[0].strip())
 
-        candidate = repo.get_candidate(
-            candidate_id
-        )
+        candidate = repo.get_candidate(candidate_id)
 
         left, right = st.columns(2)
 
         with left:
 
-            st.write(
-                f"**Name:** {candidate['name']}"
-            )
+            st.write(f"**Name:** {candidate['name']}")
 
-            st.write(
-                f"**Email:** {candidate['email']}"
-            )
+            st.write(f"**Email:** {candidate['email']}")
 
-            st.write(
-                f"**Phone:** {candidate['phone']}"
-            )
+            st.write(f"**Phone:** {candidate['phone']}")
 
-            st.write(
-                f"**Experience:** {candidate['experience']} Years"
-            )
+            st.write(f"**Experience:** {candidate['experience']} Years")
 
         with right:
 
-            st.write(
-                f"**Score:** {candidate['score']:.2f}%"
-            )
+            st.write(f"**Score:** {candidate['score']:.2f}%")
 
-            st.write(
-                f"**Recommendation:** {candidate['recommendation']}"
-            )
+            st.write(f"**Recommendation:** {candidate['recommendation']}")
 
-            st.write(
-                f"**Created:** {candidate['created_at']}"
-            )
+            st.write(f"**Created:** {candidate['created_at']}")
 
         st.markdown("---")
 
@@ -251,9 +228,7 @@ try:
 
         else:
 
-            st.warning(
-                "Report file not found."
-            )
+            st.warning("Report file not found.")
 
         st.markdown("---")
 
@@ -268,9 +243,7 @@ try:
 
         try:
 
-            matched = json.loads(
-                matched
-            ) if matched else []
+            matched = json.loads(matched) if matched else []
 
         except Exception:
 
@@ -278,9 +251,7 @@ try:
 
         try:
 
-            missing = json.loads(
-                missing
-            ) if missing else []
+            missing = json.loads(missing) if missing else []
 
         except Exception:
 
@@ -288,9 +259,7 @@ try:
 
         with left:
 
-            st.subheader(
-                "✅ Matched Skills"
-            )
+            st.subheader("✅ Matched Skills")
 
             if matched:
 
@@ -300,15 +269,11 @@ try:
 
             else:
 
-                st.info(
-                    "No matched skills."
-                )
+                st.info("No matched skills.")
 
         with right:
 
-            st.subheader(
-                "❌ Missing Skills"
-            )
+            st.subheader("❌ Missing Skills")
 
             if missing:
 
@@ -318,9 +283,7 @@ try:
 
             else:
 
-                st.success(
-                    "No missing skills."
-                )
+                st.success("No missing skills.")
 
         st.markdown("---")
 
@@ -333,13 +296,9 @@ try:
             type="primary",
         ):
 
-            repo.delete_candidate(
-                candidate_id
-            )
+            repo.delete_candidate(candidate_id)
 
-            st.success(
-                "Candidate deleted successfully."
-            )
+            st.success("Candidate deleted successfully.")
 
             st.rerun()
 
@@ -347,9 +306,7 @@ except Exception as error:
 
     log_error(str(error))
 
-    st.error(
-        "Unable to load candidate database."
-    )
+    st.error("Unable to load candidate database.")
 
     st.caption(str(error))
 

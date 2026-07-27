@@ -22,6 +22,7 @@ def read_json_file(file_path: str) -> dict:
     with open(path, "r", encoding="utf-8") as file:
         return json.load(file)
 
+
 def write_text_file(file_path: str, content: str) -> None:
     """
     Write text to a file.

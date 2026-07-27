@@ -26,9 +26,7 @@ class SkillMatcher:
         required_skill: str,
     ) -> bool:
 
-        logger.info(
-            f"Comparing '{candidate_skill}' with '{required_skill}'"
-        )
+        logger.info(f"Comparing '{candidate_skill}' with '{required_skill}'")
 
         candidate_skill = self.normalize(candidate_skill)
         required_skill = self.normalize(required_skill)
@@ -38,8 +36,6 @@ class SkillMatcher:
             required_skill,
         )
 
-        logger.info(
-            f"Skill matched (score={score})"
-        )
+        logger.info(f"Skill matched (score={score})")
 
         return score >= self.threshold

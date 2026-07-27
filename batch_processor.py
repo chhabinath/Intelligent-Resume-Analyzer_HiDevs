@@ -50,10 +50,7 @@ class BatchProcessor:
                 # Save TXT Report
                 # ---------------------------------------
 
-                report_path = (
-                    Path("reports")
-                    / f"{resume_file.stem}_report.txt"
-                )
+                report_path = Path("reports") / f"{resume_file.stem}_report.txt"
 
                 reporter.save_text_report(
                     report,
@@ -64,10 +61,7 @@ class BatchProcessor:
                 # Save PDF Report
                 # ---------------------------------------
 
-                pdf_path = (
-                    Path("reports")
-                    / f"{resume_file.stem}_report.pdf"
-                )
+                pdf_path = Path("reports") / f"{resume_file.stem}_report.pdf"
 
                 pdf_exporter.export_report(
                     candidate,
@@ -76,9 +70,7 @@ class BatchProcessor:
                     str(pdf_path),
                 )
 
-                logger.info(
-                    f"PDF report saved: {pdf_path}"
-                )
+                logger.info(f"PDF report saved: {pdf_path}")
 
                 # ---------------------------------------
                 # Store Result
@@ -94,15 +86,11 @@ class BatchProcessor:
                     }
                 )
 
-                logger.info(
-                    f"Successfully processed {resume_file.name}"
-                )
+                logger.info(f"Successfully processed {resume_file.name}")
 
             except Exception as error:
 
-                logger.error(
-                    f"Failed to process {resume_file.name}: {error}"
-                )
+                logger.error(f"Failed to process {resume_file.name}: {error}")
 
                 continue
 
@@ -124,14 +112,10 @@ class BatchProcessor:
                 "reports/summary.xlsx",
             )
 
-            logger.info(
-                "Batch summary report generated"
-            )
+            logger.info("Batch summary report generated")
 
         else:
 
-            logger.warning(
-                "No valid resumes were processed."
-            )
+            logger.warning("No valid resumes were processed.")
 
         return results

@@ -61,12 +61,9 @@ st.sidebar.caption("Milestone 12 - Analytics Dashboard")
 
 st.title("📄 Intelligent Resume Analyzer")
 
-st.subheader(
-    "AI-Powered Resume Screening & Candidate Matching System"
-)
+st.subheader("AI-Powered Resume Screening & Candidate Matching System")
 
-st.write(
-    """
+st.write("""
 Welcome to the **Intelligent Resume Analyzer**.
 
 This application automatically analyzes resumes against job
@@ -74,8 +71,7 @@ descriptions, evaluates candidate suitability, identifies
 skill gaps, and generates professional reports.
 
 Use the navigation menu on the left to explore each module.
-"""
-)
+""")
 
 st.markdown("---")
 
@@ -248,21 +244,15 @@ st.header("🟢 System Status")
 
 if jobs == 0:
 
-    st.error(
-        "No job descriptions found. Add JSON files to the 'jobs' folder."
-    )
+    st.error("No job descriptions found. Add JSON files to the 'jobs' folder.")
 
 elif resumes == 0:
 
-    st.warning(
-        "No resumes found. Add TXT resumes to the 'resumes' folder."
-    )
+    st.warning("No resumes found. Add TXT resumes to the 'resumes' folder.")
 
 else:
 
-    st.success(
-        "System is ready for resume analysis."
-    )
+    st.success("System is ready for resume analysis.")
 
 st.markdown("---")
 
@@ -293,8 +283,7 @@ st.markdown("---")
 
 with st.expander("📂 Project Directory Information"):
 
-    st.code(
-        f"""
+    st.code(f"""
 Jobs Folder
 {Path("jobs").resolve()}
 
@@ -303,8 +292,7 @@ Resumes Folder
 
 Reports Folder
 {Path("reports").resolve()}
-"""
-    )
+""")
 
 st.markdown("---")
 

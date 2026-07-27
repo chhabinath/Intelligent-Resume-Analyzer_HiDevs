@@ -3,9 +3,7 @@ from logger import logger
 
 def log_page_visit(page: str):
 
-    logger.info(
-        f"Visited page: {page}"
-    )
+    logger.info(f"Visited page: {page}")
 
 
 def log_success(message: str):

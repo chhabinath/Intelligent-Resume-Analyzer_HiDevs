@@ -18,6 +18,7 @@ class Job:
     min_experience: int
     education: str
 
+
 @dataclass
 class MatchResult:
     score: int

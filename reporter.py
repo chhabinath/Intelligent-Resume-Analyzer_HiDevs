@@ -22,17 +22,9 @@ class ReportGenerator:
         candidate's resume analysis.
         """
 
-        matched = (
-            ", ".join(result.matched_skills)
-            if result.matched_skills
-            else "None"
-        )
+        matched = ", ".join(result.matched_skills) if result.matched_skills else "None"
 
-        missing = (
-            ", ".join(result.missing_skills)
-            if result.missing_skills
-            else "None"
-        )
+        missing = ", ".join(result.missing_skills) if result.missing_skills else "None"
 
         report = f"""
         ============================================================
@@ -68,11 +60,7 @@ class ReportGenerator:
 
         return report.strip()
 
-    def save_text_report(
-            self, 
-            report: str, 
-            file_path: str
-        ) -> None:
+    def save_text_report(self, report: str, file_path: str) -> None:
         """
         Save the generated report as a text file.
         """

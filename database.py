@@ -5,9 +5,14 @@ import sqlite3
 # Database Configuration
 # --------------------------------------------------
 
-DATABASE_DIR = Path("database")
+# Project root directory
+BASE_DIR = Path(__file__).resolve().parent
+
+# Database directory
+DATABASE_DIR = BASE_DIR / "database"
 DATABASE_DIR.mkdir(exist_ok=True)
 
+# Database file
 DATABASE_PATH = DATABASE_DIR / "resume_analyzer.db"
 
 
@@ -18,9 +23,17 @@ class Database:
     """
 
     def __init__(self):
+        # Print database location (helps during debugging)
+        print(f"Using Database: {DATABASE_PATH}")
+
         self.connection = sqlite3.connect(DATABASE_PATH)
+
         self.connection.row_factory = sqlite3.Row
+
         self.cursor = self.connection.cursor()
+
+        # Ensure tables exist
+        self.initialize()
 
     # --------------------------------------------------
     # Create Tables
@@ -33,10 +46,13 @@ class Database:
 
         self.cursor.execute("""
         CREATE TABLE IF NOT EXISTS candidates (
+
             id INTEGER PRIMARY KEY AUTOINCREMENT,
 
             name TEXT NOT NULL,
+
             email TEXT,
+
             phone TEXT,
 
             experience REAL,
@@ -93,12 +109,48 @@ class Database:
         self.connection.commit()
 
     # --------------------------------------------------
+    # Execute Query
+    # --------------------------------------------------
+
+    def execute(self, query, parameters=()):
+        """
+        Execute INSERT, UPDATE or DELETE queries.
+        """
+        self.cursor.execute(query, parameters)
+        self.connection.commit()
+
+    # --------------------------------------------------
+    # Fetch All
+    # --------------------------------------------------
+
+    def fetchall(self, query, parameters=()):
+        """
+        Execute SELECT query and return all rows.
+        """
+        self.cursor.execute(query, parameters)
+        return self.cursor.fetchall()
+
+    # --------------------------------------------------
+    # Fetch One
+    # --------------------------------------------------
+
+    def fetchone(self, query, parameters=()):
+        """
+        Execute SELECT query and return one row.
+        """
+        self.cursor.execute(query, parameters)
+        return self.cursor.fetchone()
+
+    # --------------------------------------------------
     # Close Database
     # --------------------------------------------------
 
     def close(self):
-
-        self.connection.close()
+        """
+        Close database connection.
+        """
+        if self.connection:
+            self.connection.close()
 
 
 # --------------------------------------------------
@@ -109,8 +161,7 @@ if __name__ == "__main__":
 
     db = Database()
 
-    db.initialize()
+    print("Database initialized successfully.")
+    print(f"Database file: {DATABASE_PATH}")
 
     db.close()
-
-    print("Database initialized successfully.")

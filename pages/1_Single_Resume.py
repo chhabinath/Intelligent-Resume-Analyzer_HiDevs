@@ -37,9 +37,7 @@ st.set_page_config(
 
 st.title("📄 Single Resume Analysis")
 
-st.write(
-    "Upload one resume and compare it with a selected job description."
-)
+st.write("Upload one resume and compare it with a selected job description.")
 
 st.markdown("---")
 
@@ -59,13 +57,7 @@ uploaded_file = st.file_uploader(
 jobs_dir = Path("jobs")
 jobs_dir.mkdir(exist_ok=True)
 
-job_files = sorted(
-    [
-        file
-        for file in os.listdir(jobs_dir)
-        if file.endswith(".json")
-    ]
-)
+job_files = sorted([file for file in os.listdir(jobs_dir) if file.endswith(".json")])
 
 if not job_files:
     st.warning("No job description files found in the 'jobs' folder.")
@@ -107,9 +99,7 @@ if st.button("Analyze Resume"):
         # Load Job Description
         # ---------------------------------------------
 
-        job = load_job(
-            str(jobs_dir / selected_job)
-        )
+        job = load_job(str(jobs_dir / selected_job))
 
         # ---------------------------------------------
         # Match Resume
@@ -158,25 +148,31 @@ if st.button("Analyze Resume"):
 
         try:
 
-            repository.add_candidate(
+            st.info("Saving candidate to database...")
+
+            candidate_id = repository.add_candidate(
                 candidate,
                 result,
                 str(report_path),
             )
 
+            st.success(f"Candidate saved successfully! (ID: {candidate_id})")
+
+        except Exception as e:
+
+            st.exception(e)
+            raise
+
         finally:
 
             repository.close()
-
         # ---------------------------------------------
         # Success Message
         # ---------------------------------------------
 
         st.success("Resume analyzed successfully!")
 
-        log_success(
-            f"Resume analyzed successfully: {candidate.name}"
-        )
+        log_success(f"Resume analyzed successfully: {candidate.name}")
 
         st.markdown("---")
 
@@ -190,8 +186,7 @@ if st.button("Analyze Resume"):
 
         with col1:
 
-            st.info(
-                f"""
+            st.info(f"""
 **Name**
 
 {candidate.name}
@@ -199,13 +194,11 @@ if st.button("Analyze Resume"):
 **Email**
 
 {candidate.email}
-"""
-            )
+""")
 
         with col2:
 
-            st.info(
-                f"""
+            st.info(f"""
 **Experience**
 
 {candidate.experience} Years
@@ -213,8 +206,7 @@ if st.button("Analyze Resume"):
 **Education**
 
 {candidate.education}
-"""
-            )
+""")
 
         st.markdown("---")
 
@@ -344,10 +336,10 @@ if st.button("Analyze Resume"):
 
     except Exception as error:
 
+        import traceback
+
+        traceback.print_exc()
+
         log_error(str(error))
 
-        st.error(
-            "An unexpected error occurred while analyzing the resume."
-        )
-
-        st.caption(str(error))
+        st.exception(error)

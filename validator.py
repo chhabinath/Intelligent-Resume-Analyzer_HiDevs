@@ -26,15 +26,11 @@ class CandidateValidator:
 
             if not value:
                 logger.error(f"Validation failed: {field} is missing")
-                raise ValidationError(
-                    f"{field.replace('_', ' ').title()} is required."
-                )
+                raise ValidationError(f"{field.replace('_', ' ').title()} is required.")
 
         # Experience should not be negative
         if candidate.experience < 0:
             logger.error("Validation failed: Invalid experience")
-            raise ValidationError(
-                "Experience cannot be negative."
-            )
+            raise ValidationError("Experience cannot be negative.")
 
         logger.info("Candidate validation successful")

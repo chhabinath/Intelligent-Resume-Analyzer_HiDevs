@@ -27,9 +27,7 @@ class PDFExporter:
 
         elements = []
 
-        elements.append(
-            Paragraph("Resume Analysis Report", styles["Title"])
-        )
+        elements.append(Paragraph("Resume Analysis Report", styles["Title"]))
         elements.append(Spacer(1, 12))
 
         elements.append(
@@ -93,9 +91,7 @@ class PDFExporter:
         )
 
         for skill in match_result.matched_skills:
-            elements.append(
-                Paragraph(f"• {skill}", styles["BodyText"])
-            )
+            elements.append(Paragraph(f"• {skill}", styles["BodyText"]))
 
         elements.append(Spacer(1, 12))
 
@@ -107,8 +103,6 @@ class PDFExporter:
         )
 
         for skill in match_result.missing_skills:
-            elements.append(
-                Paragraph(f"• {skill}", styles["BodyText"])
-            )
+            elements.append(Paragraph(f"• {skill}", styles["BodyText"]))
 
         document.build(elements)

@@ -4,6 +4,7 @@ from models import Candidate, Job, MatchResult
 
 skill_matcher = SkillMatcher()
 
+
 class CandidateMatcher:
     """
     Matches a candidate against a job description and
@@ -11,7 +12,6 @@ class CandidateMatcher:
     """
 
     def match(self, candidate: Candidate, job: Job) -> MatchResult:
-
         """
         Compare a candidate with a job description and
         return the calculated match result.
@@ -26,10 +26,7 @@ class CandidateMatcher:
         # -----------------------------
         # Skill Matching (50 points)
         # -----------------------------
-        candidate_skills = {
-            skill.lower().strip()
-            for skill in candidate.skills
-        }
+        candidate_skills = {skill.lower().strip() for skill in candidate.skills}
 
         for skill in job.required_skills:
 
@@ -46,14 +43,11 @@ class CandidateMatcher:
             else:
                 missing_skills.append(skill)
 
-
         required_skill_count = len(job.required_skills)
         matched_skill_count = len(matched_skills)
 
         if required_skill_count > 0:
-            skill_score = int(
-                (matched_skill_count / required_skill_count) * 50
-            )
+            skill_score = int((matched_skill_count / required_skill_count) * 50)
             score += skill_score
 
         # -----------------------------
@@ -65,18 +59,13 @@ class CandidateMatcher:
         # -----------------------------
         # Education Matching (20 points)
         # -----------------------------
-        if (
-            candidate.education.strip().lower()
-            == job.education.strip().lower()
-        ):
+        if candidate.education.strip().lower() == job.education.strip().lower():
             score += 20
 
         # Maximum score should not exceed 100
         score = min(score, 100)
 
-        logger.info(
-            f"Matched Skills: {len(matched_skills)}/{required_skill_count}"
-        )
+        logger.info(f"Matched Skills: {len(matched_skills)}/{required_skill_count}")
 
         logger.info(f"Final score: {score}")
 

@@ -4,6 +4,7 @@ from exceptions import ParseError
 from logger import logger
 from models import Candidate
 
+
 class ResumeParser:
     """
     Parses resume text and extracts candidate information.
@@ -15,24 +16,21 @@ class ResumeParser:
     def parse(self) -> Candidate:
 
         logger.info("Parsing resume")
-        
-        candidate =  Candidate(
+
+        candidate = Candidate(
             name=self.extract_name(),
             email=self.extract_email(),
             phone=self.extract_phone(),
             skills=self.extract_skills(),
             experience=self.extract_experience(),
-            education=self.extract_education()
+            education=self.extract_education(),
         )
         logger.info("Resume parsing completed")
 
         return candidate
 
     def extract_email(self) -> str:
-        match = re.search(
-            r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}",
-            self.text
-        )
+        match = re.search(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", self.text)
         if not match:
             raise ParseError("Email not found.")
 
@@ -41,15 +39,12 @@ class ResumeParser:
         return match.group()
 
     def extract_phone(self) -> str:
-        match = re.search(
-            r"(\+?\d[\d\s-]{8,}\d)",
-            self.text
-        )
+        match = re.search(r"(\+?\d[\d\s-]{8,}\d)", self.text)
 
         if match:
             logger.info("Phone number extracted")
             return match.group()
-        
+
         logger.warning("Phone number not found")
         return ""
 
@@ -91,11 +86,7 @@ class ResumeParser:
 
     def extract_experience(self) -> str:
 
-        match = re.search(
-            r"(\d+)\s+Years?",
-            self.text,
-            re.IGNORECASE
-        )
+        match = re.search(r"(\d+)\s+Years?", self.text, re.IGNORECASE)
 
         if match:
             experience = int(match.group(1))
@@ -117,6 +108,6 @@ class ResumeParser:
                     education = lines[i + 1].strip()
                     logger.info("Education extracted")
                     return education
-                
+
         logger.warning("Education not found")
         return ""

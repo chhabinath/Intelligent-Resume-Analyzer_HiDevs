@@ -39,23 +39,22 @@ class ExcelExporter:
             key=lambda x: x["score"],
             reverse=True,
         ):
-            worksheet.append([
-                result["candidate"],
-                result["score"],
-                result["recommendation"],
-                ", ".join(result["matched_skills"]),
-                ", ".join(result["missing_skills"]),
-            ])
+            worksheet.append(
+                [
+                    result["candidate"],
+                    result["score"],
+                    result["recommendation"],
+                    ", ".join(result["matched_skills"]),
+                    ", ".join(result["missing_skills"]),
+                ]
+            )
 
         # Auto-fit column widths
         for column_cells in worksheet.columns:
-            length = max(
-                len(str(cell.value or ""))
-                for cell in column_cells
+            length = max(len(str(cell.value or "")) for cell in column_cells)
+            worksheet.column_dimensions[column_cells[0].column_letter].width = (
+                length + 2
             )
-            worksheet.column_dimensions[
-                column_cells[0].column_letter
-            ].width = length + 2
 
         Path(output_file).parent.mkdir(
             parents=True,

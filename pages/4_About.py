@@ -13,16 +13,14 @@ st.set_page_config(
 
 st.title("ℹ️ About Intelligent Resume Analyzer")
 
-st.markdown(
-    """
+st.markdown("""
 The **Intelligent Resume Analyzer** is an AI-assisted resume screening
 application that evaluates resumes against job descriptions and produces
 detailed analysis reports.
 
 It combines resume parsing, validation, skill matching, scoring,
 analytics, and report generation into a single application.
-"""
-)
+""")
 
 st.markdown("---")
 
@@ -59,7 +57,7 @@ st.markdown("---")
 st.header("🔄 Workflow")
 
 st.code(
-"""
+    """
 Resume
    │
    ▼
@@ -83,7 +81,7 @@ TXT / PDF / Excel Reports
    ▼
 Analytics Dashboard
 """,
-language="text",
+    language="text",
 )
 
 st.markdown("---")
@@ -95,7 +93,7 @@ st.markdown("---")
 st.header("📁 Project Structure")
 
 st.code(
-"""
+    """
 Intelligent-Resume-Analyzer_HiDevs/
 
 app.py
@@ -126,7 +124,7 @@ jobs/
 reports/
 resumes/
 """,
-language="text",
+    language="text",
 )
 
 st.markdown("---")
@@ -193,6 +191,4 @@ st.markdown("---")
 # Footer
 # ----------------------------------------------------
 
-st.success(
-    "Intelligent Resume Analyzer • Milestone 12 • Analytics Dashboard"
-)
+st.success("Intelligent Resume Analyzer • Milestone 12 • Analytics Dashboard")

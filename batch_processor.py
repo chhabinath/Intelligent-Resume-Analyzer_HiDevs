@@ -9,6 +9,7 @@ from reporter import ReportGenerator
 from validator import CandidateValidator
 
 from excel_exporter import ExcelExporter
+from pdf_exporter import PDFExporter
 
 
 
@@ -24,6 +25,8 @@ class BatchProcessor:
         matcher = CandidateMatcher()
         reporter = ReportGenerator()
         excel_exporter = ExcelExporter()
+        pdf_exporter = PDFExporter()
+        
 
         for resume_file in Path(resumes_dir).glob("*.txt"):
             logger.info(f"Processing {resume_file.name}")
@@ -83,7 +86,21 @@ class BatchProcessor:
                 "reports/summary.xlsx",
             )
 
+            pdf_path = (
+                Path("reports") /
+                f"{resume_file.stem}_report.pdf"
+            )
             logger.info("Excel summary report generated")
+
+            pdf_exporter.export_report(
+                candidate,
+                job,
+                match_result,
+                str(pdf_path),
+            )
+
+            logger.info(f"PDF report saved: {pdf_path}")
+
 
             logger.info("Batch summary report generated")
         else:
